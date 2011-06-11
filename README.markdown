@@ -20,10 +20,13 @@ Installation
 
 Usage
 -----
-1. example : 
+
 	$this->load->library('cimarkdown');
-	$this->cimarkdown->markit($markdowndemo);
 	
-2. where $markdowndemo is a variable which contains the markdown text entered by the user
+	$this->cimarkdown->markit($markdowndemo);
+
+
+	
+where $markdowndemo is a variable which contains the markdown text entered by the user
 
 
