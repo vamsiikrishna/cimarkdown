@@ -1,5 +1,5 @@
 <?php
-class Markit extends CI_Controller{
+class Examplemarkdown extends CI_Controller{
 public function index()
 {
 $this->load->library('cimarkdown');
