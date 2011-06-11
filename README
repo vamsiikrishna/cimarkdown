@@ -1,0 +1,24 @@
+Markdown library for CodeIgniter
+====================
+
+Based on PHP Markdown by Michel Fortin
+[PHP Markdown](http://michelf.com/projects/php-markdown/).
+
+Original Markdown
+John Gruber
+[Markdown] (http://daringfireball.net/projects/markdown/).
+---------------------
+
+Markdown is awesome it is a text-to-HTML conversion tool for web writers
+
+### Instructions
+*Move the cimarkdown.php to your libraries directory
+*load the cimarkdown library in your controller
+*example : 
+*$this->load->library('cimarkdown');
+
+*to use markdow 
+*$this->cimarkdown->markit($markdowndemo);
+*where $markdowndemo is a variable which contains the markdown text entered by the user
+
+
