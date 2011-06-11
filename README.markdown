@@ -3,7 +3,7 @@ Markdown library for CodeIgniter
 Markdown is awesome it is a text-to-HTML conversion tool for web writers
 
 Based on PHP Markdown by Michel Fortin
-This is an [PHP Markdown](http://michelf.com/projects/php-markdown/).
+[PHP Markdown](http://michelf.com/projects/php-markdown/).
 
 Original Markdown
 John Gruber
