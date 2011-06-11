@@ -12,13 +12,13 @@ John Gruber
 
 
 ### Instructions
-*Move the cimarkdown.php to your libraries directory
-*load the cimarkdown library in your controller
-*example : 
-*$this->load->library('cimarkdown');
+-Move the cimarkdown.php to your libraries directory
+-load the cimarkdown library in your controller
+-example : 
+-$this->load->library('cimarkdown');
 
-*to use markdow 
-*$this->cimarkdown->markit($markdowndemo);
-*where $markdowndemo is a variable which contains the markdown text entered by the user
+-to use markdow 
+-$this->cimarkdown->markit($markdowndemo);
+-where $markdowndemo is a variable which contains the markdown text entered by the user
 
 
