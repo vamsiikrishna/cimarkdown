@@ -5,7 +5,7 @@ Markdown is awesome it is a text-to-HTML conversion tool for web writers
 Based on PHP Markdown by Michel Fortin
 [PHP Markdown](http://michelf.com/projects/php-markdown/).
 
-Original Markdown
+Original Markdown by
 John Gruber
 [Markdown] (http://daringfireball.net/projects/markdown/).
 
