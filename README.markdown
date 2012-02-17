@@ -7,8 +7,7 @@ Based on PHP Markdown by Michel Fortin
 
 Original Markdown by
 John Gruber
-[Markdown] (http://daringfireball.net/projects/markdown/).
-
+[Markdown] (http://daringfireball.net/projects/markdown/) - (Version 1.0.1o Sun 8 Jan 2012 )
 
 
 Installation
