@@ -2,55 +2,47 @@
 #
 # Markdown  -  A text-to-HTML conversion tool for web writers
 #
-# CodeIgniter Markdown
-# Vamsi Krishna
-# <http://partialbits.com>
-#
 # PHP Markdown
-# Copyright (c) 2004-2009 Michel Fortin  
+# Copyright (c) 2004-2012 Michel Fortin  
 # <http://michelf.com/projects/php-markdown/>
 #
 # Original Markdown
 # Copyright (c) 2004-2006 John Gruber  
 # <http://daringfireball.net/projects/markdown/>
 #
+#-----------------------------------------------------------------------------------------------
 
+define( 'MARKDOWN_VERSION',  "1.0.1o" ); # Sun 8 Jan 2012
 
-define( 'MARKDOWN_VERSION',  "1.0.1n" ); # Sat 10 Oct 2009
-class Cimarkdown {
-
-     public function markit($text)
-     {
-     return Markdown($text);
-     }
+class ciMarkdown
+{
+	// parse markdown -> HTML
+	public function markit($text){
+		return Markdown($text);
+	}
+	 
+	 // strip all markdown and return plain text (good for excerpts or RSS)
+	 public function plaintext($text){
+		return strip_tags( Markdown($text) );
+	 }
 }
+
+#-----------------------------------------------------------------------------------------------
 
 #
 # Global default settings:
 #
-
 # Change to ">" for HTML output
-@define( 'MARKDOWN_EMPTY_ELEMENT_SUFFIX',  " />");
+@define( 'MARKDOWN_EMPTY_ELEMENT_SUFFIX', " />");
 
 # Define the width of a tab for code blocks.
-@define( 'MARKDOWN_TAB_WIDTH',     4 );
-
-
-#
-# WordPress settings:
-#
-
-# Change to false to remove Markdown from posts and/or comments.
-@define( 'MARKDOWN_WP_POSTS',      true );
-@define( 'MARKDOWN_WP_COMMENTS',   true );
-
-
+@define( 'MARKDOWN_TAB_WIDTH', 4 );
 
 ### Standard Function Interface ###
 
 @define( 'MARKDOWN_PARSER_CLASS',  'Markdown_Parser' );
 
-function Markdown($text) {
+function Markdown( $text ) {
 #
 # Initialize the parser and return the result of its transform method.
 #
@@ -807,7 +799,7 @@ class Markdown_Parser {
 
 		# Re-usable patterns to match list item bullets and number markers:
 		$marker_ul_re  = '[*+-]';
-		$marker_ol_re  = '\d+[.]';
+		$marker_ol_re  = '\d+[\.]';
 		$marker_any_re = "(?:$marker_ul_re|$marker_ol_re)";
 
 		$markers_relist = array(
@@ -868,7 +860,7 @@ class Markdown_Parser {
 	function _doLists_callback($matches) {
 		# Re-usable patterns to match list item bullets and number markers:
 		$marker_ul_re  = '[*+-]';
-		$marker_ol_re  = '\d+[.]';
+		$marker_ol_re  = '\d+[\.]';
 		$marker_any_re = "(?:$marker_ul_re|$marker_ol_re)";
 		
 		$list = $matches[1];
@@ -998,17 +990,17 @@ class Markdown_Parser {
 
 
 	var $em_relist = array(
-		''  => '(?:(?<!\*)\*(?!\*)|(?<!_)_(?!_))(?=\S|$)(?![.,:;]\s)',
+		''  => '(?:(?<!\*)\*(?!\*)|(?<!_)_(?!_))(?=\S|$)(?![\.,:;]\s)',
 		'*' => '(?<=\S|^)(?<!\*)\*(?!\*)',
 		'_' => '(?<=\S|^)(?<!_)_(?!_)',
 		);
 	var $strong_relist = array(
-		''   => '(?:(?<!\*)\*\*(?!\*)|(?<!_)__(?!_))(?=\S|$)(?![.,:;]\s)',
+		''   => '(?:(?<!\*)\*\*(?!\*)|(?<!_)__(?!_))(?=\S|$)(?![\.,:;]\s)',
 		'**' => '(?<=\S|^)(?<!\*)\*\*(?!\*)',
 		'__' => '(?<=\S|^)(?<!_)__(?!_)',
 		);
 	var $em_strong_relist = array(
-		''    => '(?:(?<!\*)\*\*\*(?!\*)|(?<!_)___(?!_))(?=\S|$)(?![.,:;]\s)',
+		''    => '(?:(?<!\*)\*\*\*(?!\*)|(?<!_)___(?!_))(?=\S|$)(?![\.,:;]\s)',
 		'***' => '(?<=\S|^)(?<!\*)\*\*\*(?!\*)',
 		'___' => '(?<=\S|^)(?<!_)___(?!_)',
 		);
@@ -1610,3 +1602,4 @@ negligence or otherwise) arising in any way out of the use of this
 software, even if advised of the possibility of such damage.
 
 */
+?>
